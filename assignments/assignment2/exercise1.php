@@ -2,13 +2,13 @@
 
 $output = "";
 
-for ($i = 1; $i <= 4; $i++) {
+for ($i = 1; $i < 5; $i++) {
     $output .= <<< HTML
         <ul>
             <li>$i</li>
                 <ul>
         HTML;
-    for ($j = 1; $j <= 5; $j++) {
+    for ($j = 1; $j < 6; $j++) {
         $output .= <<< HTML
             <li>$j</li>
             HTML;
