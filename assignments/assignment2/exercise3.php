@@ -1,33 +1,21 @@
 <?php
 
-function displayTable($rows, $cols)
+function createTable($rows, $cols)
 {
-    echo <<< HTML
-        <table border="1">
-        HTML;
-
+    echo '<table border="1">';
     for ($i = 1; $i <= $rows; $i++) {
-        echo <<< HTML
-            <tr>
-            HTML;
+        echo "<tr>";
 
         for ($j = 1; $j <= $cols; $j++) {
-            echo <<< HTML
-                <td>Row $i Cell $j</td>
-                HTML;
+            echo "<td>Row $i Cell $j</td>";
         }
-        echo <<< HTML
-            </tr>
-            HTML;
+        echo "</tr>";
     }
 
-    echo <<< HTML
-        </table>
-        HTML;
+    echo "</table>";
 }
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +28,7 @@ function displayTable($rows, $cols)
 </head>
 
 <body>
-    <?php displayTable(15, 5) ?>
+    <?php createTable(15, 5) ?>
 </body>
 
 </html>

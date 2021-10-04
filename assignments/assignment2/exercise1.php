@@ -3,20 +3,12 @@
 $output = "";
 
 for ($i = 1; $i < 5; $i++) {
-    $output .= <<< HTML
-        <ul>
-            <li>$i</li>
-                <ul>
-        HTML;
+    $output .= "<ul><li>$i</li><ul>";
+
     for ($j = 1; $j < 6; $j++) {
-        $output .= <<< HTML
-            <li>$j</li>
-            HTML;
+        $output .= "<li>$j</li>";
     }
-    $output .= <<< HTML
-            </ul>
-        </ul>
-        HTML;
+    $output .= "</ul></ul>";
 }
 
 ?>
