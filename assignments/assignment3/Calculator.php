@@ -3,7 +3,7 @@
 class Calculator
 {
     const br = "<br>";
-    function calc($operator = 0, $num1 = "x", $num2 = "bad")
+    function calc($operator = 0, $num1 = "x", $num2 = "y")
     {
         $badInputFlag = "You must enter an operator [ /, *, -, + ] and two numbers. " . Calculator::br;
 
