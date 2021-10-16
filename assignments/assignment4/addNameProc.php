@@ -17,15 +17,15 @@ class AddNameProc
             $formattedName = $lastName . ", " . $firstName;
             //adding this new formatted style to the appropriate array, with a new line
             $listOfNames .= "\n" . $formattedName;
-            //separating each set of formatted names as single values, then adding into an array
-            $first_last_name_array = explode("\n", $listOfNames);
+            //separating each set of formatted names as single values, then adding into a new array
+            $last_first_name_array = explode("\n", $listOfNames);
 
             //sorting by last names
-            sort($first_last_name_array);
+            sort($last_first_name_array);
 
             $sortedNames = "";
 
-            foreach ($first_last_name_array as $value) {
+            foreach ($last_first_name_array as $value) {
                 $sortedNames .= $value;
                 $sortedNames .= "\n";
             }
