@@ -31,11 +31,11 @@ class AddNameProc
             }
             $sortedNames = rtrim($sortedNames, "\n");
             $listOfNames = $sortedNames;
-
-            if (isset($_POST['clearNames'])) {
-                $listOfNames = "";
-            }
-            return $listOfNames;
         }
+
+        if (isset($_POST['clearNames'])) {
+            $listOfNames = "";
+        }
+        return $listOfNames;
     }
 }

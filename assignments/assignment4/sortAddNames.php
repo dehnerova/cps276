@@ -33,10 +33,10 @@ if (count($_POST) > 0) {
                 <label for="enteredName">Enter Name</label><br>
                 <textarea style="resize:none" class="form-control" id="enteredNames" name="enteredNames" cols="120" rows="1"></textarea><br>
             </div>
-            <div class="form-group">
-                <label for="listOfNames">List of Names</label><br>
-                <textarea style="resize:none;" class="form-control" id="listOfNames" name="listOfNames" rows="20" <?php echo $output ?>></textarea>
-            </div>
+            <p>
+                List of Names
+                <textarea style="height: 500px; resize:none;" class="form-control" id="listOfNames" name="listOfNames"><?php echo $output ?></textarea>
+            </p>
         </form>
 
     </main>
