@@ -1,7 +1,6 @@
 <?php
-
 require_once 'listFilesProc.php';
-$listFiles = new DBcomm();
+$listFiles = new DBfunc();
 ?>
 
 <!DOCTYPE html>
@@ -20,14 +19,13 @@ $listFiles = new DBcomm();
 <body>
     <div id="wrapper" class="container">
 
-        <h1>List Files</h1>
+        <h1>File List</h1>
         <p>
             <a href="FileUploadForm.php">Add Files</a>
         </p>
 
         <p>
         <div id="filesList"><?php echo $listFiles->getFiles('list'); ?></div>
-            <!-- <?php echo $listFiles->getFileNames(); ?> -->
         </p>
 
     </div>

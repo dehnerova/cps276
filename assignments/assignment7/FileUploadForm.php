@@ -1,18 +1,14 @@
 <?php
 
-//step 1 - create form, get data
-//step 2 - go to fileuploadproc and send data to addFile()
-
 $output = "";
 
-//if there is something to send, require fileUploadProc
-//create variale addFile, to it attach a new DBupload class instance
+//if there is file name/path to send, require fileUploadProc
+//create variale addFile, to it attach a new Upload class instance
 //create output variable, concat addFile function
 if (count($_POST) > 0) {
     require_once 'fileUploadProc.php';
-    $addFile = new DBupload();
+    $addFile = new Upload();
     $output = $addFile->addFile();
-   // $output = "test inside fileuploadform.php";
 }
 ?>
 
@@ -31,9 +27,9 @@ if (count($_POST) > 0) {
 <body>
     <div id="wrapper" class="container">
 
-        <h1>File Upload - Beginnings of stress</h1>
+        <h1>File Upload</h1>
         <p>
-            <a href="listFilesPage.php">Show File List</a>
+            <a href="listFilesPage.php">View List of Files</a>
         </p>
 
         <p>
