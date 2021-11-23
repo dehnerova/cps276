@@ -122,11 +122,15 @@ class Date_time extends PdoMethods
     /*THIS FUNCTION TAKES THE DATA FROM THE DATABASE AND RETURNS A TABLE OF THE DATA*/
     function createList($records, $begStamp, $endStamp)
     {
+        $table = "";
         // setting timezone to avoid warning message
         date_default_timezone_set('America/Detroit');
 
         // Starting table using database values
-        $table = '<tr><th>Timestamp</th><th>Note</th>';
+       // $table = '<tr><th>Timestamp</th><th>Note</th>';
+       $table .= '<tr>';
+       $table .= '<th>Timestamp</th>';
+       $table .= '<th>Note</th>';
         foreach (array_reverse($records) as $value) {
 
             // display values only between timestamps selected          
