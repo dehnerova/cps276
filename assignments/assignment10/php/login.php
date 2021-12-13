@@ -19,7 +19,7 @@ function init(){
       $res = addData($_POST);
 
       if($res=="error"){
-        return getform("<h1 style='text-align:center;'>Login</h1><p>There was an error returning your request</p>",$elementsArr);
+        return getform("<h1 style='text-align:center;'>Login</h1><p style='color:red;'>There was an error returning your request</p>",$elementsArr);
       }
           
       else if(count($res)>0){
@@ -31,7 +31,7 @@ function init(){
 
           }
           else {
-            return getform("<h1 style='text-align:center;' >Login</h1><p>Credentials not found</p>",$elementsArr);       
+            return getform("<h1 style='text-align:center;' >Login</h1><p style='color:red;'>Credentials not found</p>",$elementsArr);       
           }
           
         }
